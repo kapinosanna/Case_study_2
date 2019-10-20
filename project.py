@@ -90,12 +90,27 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
                 tax += tax_rates[k] * (control_sums[k + 1] - (control_sums[k] + 1))
             print(ann_tax.format(tax))
 
+            # Making x and y vectors for the plot
+            control_sums[0] = 0
+            x_vector = []
+            for q in range(i):
+                x_vector.append(control_sums[q])
+                x_vector.append(control_sums[q+1])
+            x_vector.append(control_sums[i])
+            x_vector.append(income)
+
+            y_vector = []
+            for s in range(i+1):
+                y_vector.append(tax_rates[s])
+                y_vector.append(tax_rates[s])
+
+
             # Initializing the plot
             fig, ax = subplots()
-            ax.plot(control_sums[1:i+1] + [income], tax_rates[:i+1], linestyle='-', marker='o')
-            ax.set_xticks(control_sums[1:i+1] + [income])
+            ax.plot(x_vector, y_vector, linestyle='-', marker='o')
+            ax.set_xticks(x_vector)
             ax.set_xlabel(your_income)
-            ax.set_yticks(tax_rates[:i+1])
+            ax.set_yticks(y_vector)
             ax.set_ylabel(relevant_tax_rates)
             ax.set_title(plot_title)
             break
@@ -112,18 +127,32 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
                 tax += tax_rates[k] * (control_sums[k + 1] - (control_sums[k] + 1))
             print(ann_tax.format(tax))
 
+            # Making x and y vectors for the plot
+            control_sums[0] = 0
+            x_vector = []
+            for q in range(len(control_sums)-1):
+                x_vector.append(control_sums[q])
+                x_vector.append(control_sums[q + 1])
+            x_vector.append(control_sums[-1])
+            x_vector.append(income)
+
+            y_vector = []
+            for s in range(len(tax_rates)):
+                y_vector.append(tax_rates[s])
+                y_vector.append(tax_rates[s])
+
             # Initializing the plot
             fig, ax = subplots()
-            ax.plot(control_sums[1:] + [income], tax_rates, linestyle='-', marker='o')
-            ax.set_xticks(control_sums[1:] + [income])
+            ax.plot(x_vector, y_vector, linestyle='-', marker='o')
+            ax.set_xticks(x_vector)
             ax.set_xlabel(your_income)
-            ax.set_yticks(tax_rates)
+            ax.set_yticks(y_vector)
             ax.set_ylabel(relevant_tax_rates)
             ax.set_title(plot_title)
             break
 
 
-# Calculating the tax based on the subject's status 
+# Calculating the tax based on the subject's status
 if status == status_subject:
     roll_the_tax_cycle(9075, 36900, 89350, 186350, 405100, 406750)
 elif status == status_couple:
