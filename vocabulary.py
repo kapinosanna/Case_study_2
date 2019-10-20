@@ -27,8 +27,8 @@ list_months_eng = ['January', 'February', 'March', 'April', 'May', 'June', 'July
 est_mon_income_rus = 'Каков Ваш приблизительный доход в {}? '
 est_mon_income_eng = 'What is your estimated income in {}? '
 
-income_between_rus = 'Годовой доход находится между {} и {} рублями.'
-income_between_eng = 'The annual income is between {} and {} dollars.'
+income_between_rus = 'Годовой доход находится между {} и {} рублями и равен {} рублей.'
+income_between_eng = 'The annual income is between {} and {} dollars and equals {} dollars.'
 
 ann_tax_rus = 'Годовой налог равен {:.2f} рублей.'
 ann_tax_eng = 'The annual tax equals {:.2f} dollars.'

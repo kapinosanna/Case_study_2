@@ -79,7 +79,7 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
 
         # Checking if the income is between two of adjacent control sums
         if control_sums[i] <= income <= control_sums[i + 1]:
-            print(income_between.format(control_sums[i], control_sums[i + 1]))
+            print(income_between.format(control_sums[i], control_sums[i + 1], income))
 
             # Calculating the tax-part which can't be cycled
             control_sums[0] = -1
@@ -103,7 +103,6 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
             for s in range(i+1):
                 y_vector.append(tax_rates[s])
                 y_vector.append(tax_rates[s])
-
 
             # Initializing the plot
             fig, ax = subplots()
