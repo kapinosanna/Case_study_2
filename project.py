@@ -108,10 +108,12 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
             fig, ax = subplots()
             ax.plot(x_vector, y_vector, linestyle='-', marker='o')
             ax.set_xticks(x_vector)
+            ax.tick_params('x', labelrotation=20)
             ax.set_xlabel(your_income)
             ax.set_yticks(y_vector)
+            ax.tick_params('y', labelsize=12)
             ax.set_ylabel(relevant_tax_rates)
-            ax.set_title(plot_title)
+            ax.set_title(plot_title, fontsize=15)
             break
 
         elif income >= (control_sums[-1] + 1):  # When the income is higher than the biggest control sum
@@ -144,10 +146,12 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
             fig, ax = subplots()
             ax.plot(x_vector, y_vector, linestyle='-', marker='o')
             ax.set_xticks(x_vector)
+            ax.tick_params('x', labelrotation=20)
             ax.set_xlabel(your_income)
             ax.set_yticks(y_vector)
             ax.set_ylabel(relevant_tax_rates)
-            ax.set_title(plot_title)
+            ax.tick_params('y', labelsize=12)
+            ax.set_title(plot_title, fontsize=15)
             break
 
 
