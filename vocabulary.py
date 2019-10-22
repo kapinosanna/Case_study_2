@@ -28,19 +28,25 @@ est_mon_income_rus = 'Каков Ваш приблизительный дохо�
 est_mon_income_eng = 'What is your estimated income in {}? '
 
 income_between_rus = 'Годовой доход находится между {} и {} рублями и равен {} рублей.'
-income_between_eng = 'The annual income is between {} and {} dollars and equals {} dollars.'
+income_between_eng = 'The annual income is between {} and {} dollars and equals {} rubbles.'
 
 ann_tax_rus = 'Годовой налог равен {:.2f} рублей.'
-ann_tax_eng = 'The annual tax equals {:.2f} dollars.'
+ann_tax_eng = 'The annual tax equals {:.2f} rubbles.'
 
 big_income_rus = 'Годовой доход выше {} рублей и равен {} рублей.'
-big_income_eng = 'The annual income exceeds {} dollars and equals {} dollars.'
+big_income_eng = 'The annual income exceeds {} dollars and equals {} rubbles.'
 
-your_income_rus = 'Ваш годовой доход'
-your_income_eng = 'Your annual income'
+your_income_rus = 'Ваш годовой доход, рублей'
+your_income_eng = 'Your annual income, rubbles'
 
 relevant_tax_rates_rus = 'Соответствующие налоговые ставки'
 relevant_tax_rates_eng = 'Relevant tax rates'
 
 plot_title_rus = 'Начисление налога по прогрессивной системе налогообложения в зависимости от Вашего дохода'
 plot_title_eng = 'Progressive taxation depending on your income'
+
+status_heading_rus = 'Статус пользователя: {}\n'
+status_heading_eng = 'User`s status: {}\n'
+
+tax_heading_rus = 'Ваш годовой налог: {:.2f} рублей'
+tax_heading_eng = 'Your annual tax: {:.2f} rubbles'

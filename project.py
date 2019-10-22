@@ -21,6 +21,8 @@ if language.lower() == 'russian' or language.lower() == 'русский':
     your_income = your_income_rus
     relevant_tax_rates = relevant_tax_rates_rus
     plot_title = plot_title_rus
+    status_heading = status_heading_rus
+    tax_heading = tax_heading_rus
 else:
     question1 = question1_eng
     question_kids = question_kids_eng
@@ -37,6 +39,8 @@ else:
     your_income = your_income_eng
     relevant_tax_rates = relevant_tax_rates_eng
     plot_title = plot_title_eng
+    status_heading = status_heading_eng
+    tax_heading = tax_heading_eng
 
 
 # Finding out about the subject status
@@ -106,7 +110,8 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
 
             # Initializing the plot
             fig, ax = subplots()
-            ax.plot(x_vector, y_vector, linestyle='-', marker='o', label=status)
+            ax.plot(x_vector, y_vector, linestyle='-', marker='o', label=(status_heading.format(status) +
+                                                                          tax_heading.format(tax)))
             ax.set_xticks(x_vector)
             ax.tick_params('x', labelrotation=20)
             ax.set_xlabel(your_income)
@@ -145,7 +150,8 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
 
             # Initializing the plot
             fig, ax = subplots()
-            ax.plot(x_vector, y_vector, linestyle='-', marker='o', label=status)
+            ax.plot(x_vector, y_vector, linestyle='-', marker='o', label=(status_heading.format(status) +
+                                                                          tax_heading.format(tax)))
             ax.set_xticks(x_vector)
             ax.tick_params('x', labelrotation=20)
             ax.set_xlabel(your_income)
