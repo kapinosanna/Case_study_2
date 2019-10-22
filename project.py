@@ -83,7 +83,7 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
 
         # Checking if the income is between two of adjacent control sums
         if control_sums[i] <= income <= control_sums[i + 1]:
-            print(income_between.format(control_sums[i], control_sums[i + 1], income))
+            print(income_between.format(control_sums[i], control_sums[i + 1], income).replace(',', ' '))
 
             # Calculating the tax-part which can't be cycled
             control_sums[0] = -1
@@ -92,7 +92,7 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
             # Rolling the cycle to count the residual of the tax
             for k in range(i):
                 tax += tax_rates[k] * (control_sums[k + 1] - (control_sums[k] + 1))
-            print(ann_tax.format(tax))
+            print(ann_tax.format(tax).replace(',', ' '))
 
             # Making x and y vectors for the plot
             control_sums[0] = 0
@@ -111,7 +111,7 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
             # Initializing the plot
             fig, ax = subplots()
             ax.plot(x_vector, y_vector, linestyle='-', marker='o', label=(status_heading.format(status) +
-                                                                          tax_heading.format(tax)))
+                                                                          tax_heading.format(tax).replace(',', ' ')))
             ax.set_xticks(x_vector)
             ax.tick_params('x', labelrotation=20)
             ax.set_xlabel(your_income)
@@ -123,7 +123,7 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
             break
 
         elif income >= (control_sums[-1] + 1):  # When the income is higher than the biggest control sum
-            print(big_income.format(control_sums[-1], income))
+            print(big_income.format(control_sums[-1], income).replace(',', ' '))
 
             # Calculating the tax-part which can't be cycled
             control_sums[0] = -1
@@ -132,7 +132,7 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
             # Rolling the cycle to count the residual of the tax
             for k in range(len(control_sums) - 1):
                 tax += tax_rates[k] * (control_sums[k + 1] - (control_sums[k] + 1))
-            print(ann_tax.format(tax))
+            print(ann_tax.format(tax).replace(',', ' '))
 
             # Making x and y vectors for the plot
             control_sums[0] = 0
@@ -151,7 +151,7 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
             # Initializing the plot
             fig, ax = subplots()
             ax.plot(x_vector, y_vector, linestyle='-', marker='o', label=(status_heading.format(status) +
-                                                                          tax_heading.format(tax)))
+                                                                          tax_heading.format(tax).replace(',', ' ')))
             ax.set_xticks(x_vector)
             ax.tick_params('x', labelrotation=20)
             ax.set_xlabel(your_income)
