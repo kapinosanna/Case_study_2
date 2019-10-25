@@ -3,9 +3,7 @@ from vocabulary import *
 
 # Defining the language
 while True:
-    language = input('''На каком языке запускать программу: русский или английский?
-What language would you choose to launch the program: Russian or English?
-''')
+    language = input('Please choose the language: Russian or English? ')
     if language.lower() == 'russian' or language.lower() == 'русский':
         question1 = question1_rus
         question_kids = question_kids_rus
