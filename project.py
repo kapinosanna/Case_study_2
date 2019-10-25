@@ -48,15 +48,23 @@ What language would you choose to launch the program: Russian or English?
 
 
 # Finding out about the subject status
-alone = input(question1)
-if alone.lower() == 'да' or alone.lower() == 'yes':
-    kids = input(question_kids)
-    if kids.lower() == 'да' or kids.lower() == 'yes':
-        status = status_lonepar
-    elif kids.lower() == 'нет' or kids.lower() == 'no':
-        status = status_subject
-elif alone.lower() == 'нет' or alone.lower() == 'no':
-    status = status_couple
+while True:
+    alone = input(question1)
+    if alone.lower() == 'да' or alone.lower() == 'yes':
+        while True:
+            kids = input(question_kids)
+            if kids.lower() == 'да' or kids.lower() == 'yes':
+                status = status_lonepar
+                break
+            elif kids.lower() == 'нет' or kids.lower() == 'no':
+                status = status_subject
+                break
+            print('Ой, где-то опечатка! Попробуйте снова. / Oops, there`s a misprint somewhere! Please, try again!\n')
+        break
+    elif alone.lower() == 'нет' or alone.lower() == 'no':
+        status = status_couple
+        break
+    print('Ой, где-то Вы опечатались! Попробуйте снова. / Oops, there`s a misprint somewhere! Please, try again!\n')
 
 # Finding out about the subject's estimate income
 ident = input(income_differ)
