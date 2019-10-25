@@ -2,45 +2,49 @@ from matplotlib.pyplot import *
 from vocabulary import *
 
 # Defining the language
-language = input('''На каком языке запускать программу: русский или английский?
+while True:
+    language = input('''На каком языке запускать программу: русский или английский?
 What language would you choose to launch the program: Russian or English?
 ''')
-if language.lower() == 'russian' or language.lower() == 'русский':
-    question1 = question1_rus
-    question_kids = question_kids_rus
-    status_lonepar = status_lonepar_rus
-    status_subject = status_subject_rus
-    status_couple = status_couple_rus
-    income_differ = income_differ_rus
-    av_mon_income = av_mon_income_rus
-    list_months = list_months_rus
-    est_mon_income = est_mon_income_rus
-    income_between = income_between_rus
-    ann_tax = ann_tax_rus
-    big_income = big_income_rus
-    your_income = your_income_rus
-    relevant_tax_rates = relevant_tax_rates_rus
-    plot_title = plot_title_rus
-    status_heading = status_heading_rus
-    tax_heading = tax_heading_rus
-else:
-    question1 = question1_eng
-    question_kids = question_kids_eng
-    status_lonepar = status_lonepar_eng
-    status_subject = status_subject_eng
-    status_couple = status_couple_eng
-    income_differ = income_differ_eng
-    av_mon_income = av_mon_income_eng
-    list_months = list_months_eng
-    est_mon_income = est_mon_income_eng
-    income_between = income_between_eng
-    ann_tax = ann_tax_eng
-    big_income = big_income_eng
-    your_income = your_income_eng
-    relevant_tax_rates = relevant_tax_rates_eng
-    plot_title = plot_title_eng
-    status_heading = status_heading_eng
-    tax_heading = tax_heading_eng
+    if language.lower() == 'russian' or language.lower() == 'русский':
+        question1 = question1_rus
+        question_kids = question_kids_rus
+        status_lonepar = status_lonepar_rus
+        status_subject = status_subject_rus
+        status_couple = status_couple_rus
+        income_differ = income_differ_rus
+        av_mon_income = av_mon_income_rus
+        list_months = list_months_rus
+        est_mon_income = est_mon_income_rus
+        income_between = income_between_rus
+        ann_tax = ann_tax_rus
+        big_income = big_income_rus
+        your_income = your_income_rus
+        relevant_tax_rates = relevant_tax_rates_rus
+        plot_title = plot_title_rus
+        status_heading = status_heading_rus
+        tax_heading = tax_heading_rus
+        break
+    elif language.lower() == 'english' or language.lower() == 'английский':
+        question1 = question1_eng
+        question_kids = question_kids_eng
+        status_lonepar = status_lonepar_eng
+        status_subject = status_subject_eng
+        status_couple = status_couple_eng
+        income_differ = income_differ_eng
+        av_mon_income = av_mon_income_eng
+        list_months = list_months_eng
+        est_mon_income = est_mon_income_eng
+        income_between = income_between_eng
+        ann_tax = ann_tax_eng
+        big_income = big_income_eng
+        your_income = your_income_eng
+        relevant_tax_rates = relevant_tax_rates_eng
+        plot_title = plot_title_eng
+        status_heading = status_heading_eng
+        tax_heading = tax_heading_eng
+        break
+    print('Вы неверно ввели язык. Попробуйте заново. / You typed the language incorrectly. Please, try again.\n')
 
 
 # Finding out about the subject status
@@ -49,9 +53,9 @@ if alone.lower() == 'да' or alone.lower() == 'yes':
     kids = input(question_kids)
     if kids.lower() == 'да' or kids.lower() == 'yes':
         status = status_lonepar
-    else:
+    elif kids.lower() == 'нет' or kids.lower() == 'no':
         status = status_subject
-else:
+elif alone.lower() == 'нет' or alone.lower() == 'no':
     status = status_couple
 
 # Finding out about the subject's estimate income
@@ -59,7 +63,7 @@ ident = input(income_differ)
 if ident.lower() == 'нет' or ident.lower() == 'no':
     month_income = int(input(av_mon_income))
     income = month_income * 12
-else:
+elif ident.lower() == 'да' or ident.lower() == 'yes':
 
     # Stating the parameters for the coming cycle
     months = list_months
