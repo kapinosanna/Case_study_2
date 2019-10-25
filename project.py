@@ -175,7 +175,7 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
             break
 
 
-# Calculating the tax based on the subject's status
+# Calculating the tax based on the subject's status and plotting the beauty
 if status == status_subject:
     roll_the_tax_cycle(9075, 36900, 89350, 186350, 405100, 406750)
 elif status == status_couple:
