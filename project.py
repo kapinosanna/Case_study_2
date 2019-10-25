@@ -42,7 +42,7 @@ while True:
         status_heading = status_heading_eng
         tax_heading = tax_heading_eng
         break
-    print('Вы неверно ввели язык. Попробуйте заново. / You typed the language incorrectly. Please, try again.\n')
+    print('You typed the language incorrectly. Please, try again.\n')
 
 
 # Finding out about the subject status
@@ -57,12 +57,12 @@ while True:
             elif kids.lower() == 'нет' or kids.lower() == 'no':
                 status = status_subject
                 break
-            print('Ой, где-то опечатка! Попробуйте снова. / Oops, there`s a misprint somewhere! Please, try again!\n')
+            print('Oops, there`s a misprint somewhere! Please, try again!\n')
         break
     elif alone.lower() == 'нет' or alone.lower() == 'no':
         status = status_couple
         break
-    print('Ой, где-то Вы опечатались! Попробуйте снова. / Oops, there`s a misprint somewhere! Please, try again!\n')
+    print('Oops, there`s a misprint somewhere! Please, try again!\n')
 
 # Finding out about the subject's estimate income
 ident = input(income_differ)
