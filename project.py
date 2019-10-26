@@ -46,7 +46,6 @@ while True:
         break
     print('You typed the language incorrectly. Please, try again.\n')
 
-
 # Finding out about the subject status
 while True:
     alone = input(question1)
@@ -87,6 +86,22 @@ deduction_sum = int(input(deduction))
 income -= deduction_sum
 
 
+# Defining the function of plotting the step plot for the calculated tax
+# The arguments are x and y vectors, also the calculated tax is included
+def plot_step(vector_x, vector_y, tax):
+    fig, ax = subplots()
+    ax.step(vector_x, vector_y, where='post', linestyle='--', label=(status_heading.format(status) +
+                                                                     tax_heading.format(tax).replace(',', ' ')))
+    ax.set_xticks(vector_x)
+    ax.tick_params('x', labelrotation=20)
+    ax.set_xlabel(your_income)
+    ax.set_yticks(vector_y)
+    ax.tick_params('y', labelsize=12)
+    ax.set_ylabel(relevant_tax_rates)
+    ax.set_title(plot_title, fontsize=15)
+    ax.legend()
+
+
 # Defining the function of counting the tax depending on the income
 # The arguments are control sums, relevant to the subject's status
 def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
@@ -112,30 +127,11 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
 
             # Making x and y vectors for the plot
             control_sums[0] = 0
-            x_vector = []
-            for q in range(i):
-                x_vector.append(control_sums[q])
-                x_vector.append(control_sums[q+1])
-            x_vector.append(control_sums[i])
-            x_vector.append(income)
-
-            y_vector = []
-            for s in range(i+1):
-                y_vector.append(tax_rates[s])
-                y_vector.append(tax_rates[s])
+            x_vector = control_sums[:i] + [income]
+            y_vector = tax_rates[:i] + [tax_rates[i - 1]]
 
             # Initializing the plot
-            fig, ax = subplots()
-            ax.plot(x_vector, y_vector, linestyle='-', marker='o', label=(status_heading.format(status) +
-                                                                          tax_heading.format(tax).replace(',', ' ')))
-            ax.set_xticks(x_vector)
-            ax.tick_params('x', labelrotation=20)
-            ax.set_xlabel(your_income)
-            ax.set_yticks(y_vector)
-            ax.tick_params('y', labelsize=12)
-            ax.set_ylabel(relevant_tax_rates)
-            ax.set_title(plot_title, fontsize=15)
-            ax.legend()
+            plot_step(x_vector, y_vector, tax)
             break
 
         elif income >= (control_sums[-1] + 1):  # When the income is higher than the biggest control sum
@@ -152,30 +148,11 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6):
 
             # Making x and y vectors for the plot
             control_sums[0] = 0
-            x_vector = []
-            for q in range(len(control_sums)-1):
-                x_vector.append(control_sums[q])
-                x_vector.append(control_sums[q + 1])
-            x_vector.append(control_sums[-1])
-            x_vector.append(income)
-
-            y_vector = []
-            for s in range(len(tax_rates)):
-                y_vector.append(tax_rates[s])
-                y_vector.append(tax_rates[s])
+            x_vector = control_sums + [income]
+            y_vector = tax_rates + [tax_rates[-1]]
 
             # Initializing the plot
-            fig, ax = subplots()
-            ax.plot(x_vector, y_vector, linestyle='-', marker='o', label=(status_heading.format(status) +
-                                                                          tax_heading.format(tax).replace(',', ' ')))
-            ax.set_xticks(x_vector)
-            ax.tick_params('x', labelrotation=20)
-            ax.set_xlabel(your_income)
-            ax.set_yticks(y_vector)
-            ax.set_ylabel(relevant_tax_rates)
-            ax.tick_params('y', labelsize=12)
-            ax.set_title(plot_title, fontsize=15)
-            ax.legend()
+            plot_step(x_vector, y_vector, tax)
             break
 
 
