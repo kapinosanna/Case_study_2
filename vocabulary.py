@@ -50,3 +50,6 @@ STATUS_HEADING_ENG = 'User`s status: {}\n'
 
 TAX_HEADING_RUS = 'Ваш годовой налог: {:,.2f} рублей'
 TAX_HEADING_ENG = 'Your annual tax: {:,.2f} rubbles'
+
+DEDUCTION_RUS = 'Ваш годовой налоговый вычет: '
+DEDUCTION_ENG = 'The amount of tax to deduce annually: '

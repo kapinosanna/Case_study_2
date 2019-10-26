@@ -22,6 +22,7 @@ while True:
         plot_title = PLOT_TITLE_RUS
         status_heading = STATUS_HEADING_RUS
         tax_heading = TAX_HEADING_RUS
+        deduction = DEDUCTION_RUS
         break
     elif language.lower() == 'english' or language.lower() == 'английский':
         question1 = QUESTION1_ENG
@@ -41,6 +42,7 @@ while True:
         plot_title = PLOT_TITLE_ENG
         status_heading = STATUS_HEADING_ENG
         tax_heading = TAX_HEADING_ENG
+        deduction = DEDUCTION_ENG
         break
     print('You typed the language incorrectly. Please, try again.\n')
 
@@ -79,6 +81,10 @@ elif ident.lower() == 'да' or ident.lower() == 'yes':
     for z in range(12):
         month_income = int(input(est_mon_income.format(months[z])))
         income += month_income
+
+# Finding out about tax deduction
+deduction_sum = int(input(deduction))
+income -= deduction_sum
 
 
 # Defining the function of counting the tax depending on the income
