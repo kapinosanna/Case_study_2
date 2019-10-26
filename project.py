@@ -1,48 +1,13 @@
 from matplotlib.pyplot import *
-from vocabulary import *
 
 # Defining the language
 while True:
     language = input('Please choose the language: Russian or English? ')
     if language.lower() == 'russian' or language.lower() == 'русский':
-        question1 = QUESTION1_RUS
-        question_kids = QUESTION_KIDS_RUS
-        status_lonepar = STATUS_LONEPAR_RUS
-        status_subject = STATUS_SUBJECT_RUS
-        status_couple = STATUS_COUPLE_RUS
-        income_differ = INCOME_DIFFER_RUS
-        av_mon_income = AV_MON_INCOME_RUS
-        list_months = LIST_MONTHS_RUS
-        est_mon_income = EST_MON_INCOME_RUS
-        income_between = INCOME_BETWEEN_RUS
-        ann_tax = ANN_TAX_RUS
-        big_income = BIG_INCOME_RUS
-        your_income = YOUR_INCOME_RUS
-        relevant_tax_rates = RELEVANT_TAX_RATES_RUS
-        plot_title = PLOT_TITLE_RUS
-        status_heading = STATUS_HEADING_RUS
-        tax_heading = TAX_HEADING_RUS
-        deduction = DEDUCTION_RUS
+        from vocabulary_rus import *
         break
     elif language.lower() == 'english' or language.lower() == 'английский':
-        question1 = QUESTION1_ENG
-        question_kids = QUESTION_KIDS_ENG
-        status_lonepar = STATUS_LONEPAR_ENG
-        status_subject = STATUS_SUBJECT_ENG
-        status_couple = STATUS_COUPLE_ENG
-        income_differ = INCOME_DIFFER_ENG
-        av_mon_income = AV_MON_INCOME_ENG
-        list_months = LIST_MONTHS_ENG
-        est_mon_income = EST_MON_INCOME_ENG
-        income_between = INCOME_BETWEEN_ENG
-        ann_tax = ANN_TAX_ENG
-        big_income = BIG_INCOME_ENG
-        your_income = YOUR_INCOME_ENG
-        relevant_tax_rates = RELEVANT_TAX_RATES_ENG
-        plot_title = PLOT_TITLE_ENG
-        status_heading = STATUS_HEADING_ENG
-        tax_heading = TAX_HEADING_ENG
-        deduction = DEDUCTION_ENG
+        from vocabulary_eng import *
         break
     print('You typed the language incorrectly. Please, try again.\n')
 
