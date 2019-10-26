@@ -55,6 +55,7 @@ income -= deduction_sum
 # The arguments are x and y vectors, also the calculated tax is included
 def plot_step(vector_x, vector_y, tax):
     fig, ax = subplots()
+    ax.set_facecolor('#E0FFFF')
     ax.step(vector_x, vector_y, where='post', linestyle='--', label=(status_heading.format(status) +
                                                                      tax_heading.format(tax).replace(',', ' ')))
     ax.set_xticks(vector_x)
