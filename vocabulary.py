@@ -1,52 +1,52 @@
-question1_rus = 'Вы живете один/одна? '
-question1_eng = 'Do you live alone? '
+QUESTION1_RUS = 'Вы живете один/одна? '
+QUESTION1_ENG = 'Do you live alone? '
 
-question_kids_rus = 'У Вас есть дети? '
-question_kids_eng = 'Do you have kids? '
+QUESTION_KIDS_RUS = 'У Вас есть дети? '
+QUESTION_KIDS_ENG = 'Do you have kids? '
 
-status_subject_rus = 'субъект'
-status_subject_eng = 'subject'
+STATUS_SUBJECT_RUS = 'субъект'
+STATUS_SUBJECT_ENG = 'subject'
 
-status_couple_rus = 'семейная пара'
-status_couple_eng = 'couple'
+STATUS_COUPLE_RUS = 'семейная пара'
+STATUS_COUPLE_ENG = 'couple'
 
-status_lonepar_rus = 'родитель-одиночка'
-status_lonepar_eng = 'lone parent'
+STATUS_LONEPAR_RUS = 'родитель-одиночка'
+STATUS_LONEPAR_ENG = 'lone parent'
 
-income_differ_rus = 'Ваш доход различается от месяца к месяцу? '
-income_differ_eng = 'Does your income differ from month to month? '
+INCOME_DIFFER_RUS = 'Ваш доход различается от месяца к месяцу? '
+INCOME_DIFFER_ENG = 'Does your income differ from month to month? '
 
-av_mon_income_rus = 'Каков Ваш приблизительный месячный доход? '
-av_mon_income_eng = 'What is your average month income? '
+AV_MON_INCOME_RUS = 'Каков Ваш приблизительный месячный доход? '
+AV_MON_INCOME_ENG = 'What is your average month income? '
 
-list_months_rus = ['январе', 'феврале', 'марте', 'апреле', 'мае', 'июне', 'июле', 'августе', 'сентябре', 'октябре',
+LIST_MONTHS_RUS = ['январе', 'феврале', 'марте', 'апреле', 'мае', 'июне', 'июле', 'августе', 'сентябре', 'октябре',
                    'ноябре', 'декабре']
-list_months_eng = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
+LIST_MONTHS_ENG = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
                    'November', 'December']
 
-est_mon_income_rus = 'Каков Ваш приблизительный доход в {}? '
-est_mon_income_eng = 'What is your estimated income in {}? '
+EST_MON_INCOME_RUS = 'Каков Ваш приблизительный доход в {}? '
+EST_MON_INCOME_ENG = 'What is your estimated income in {}? '
 
-income_between_rus = 'Годовой доход находится между {:,} и {:,} рублями и равен {:,} рублей.'
-income_between_eng = 'The annual income is between {:,} and {:,} rubbles and equals {:,} rubbles.'
+INCOME_BETWEEN_RUS = 'Годовой доход находится между {:,} и {:,} рублями и равен {:,} рублей.'
+INCOME_BETWEEN_ENG = 'The annual income is between {:,} and {:,} rubbles and equals {:,} rubbles.'
 
-ann_tax_rus = 'Годовой налог равен {:,.2f} рублей.'
-ann_tax_eng = 'The annual tax equals {:,.2f} rubbles.'
+ANN_TAX_RUS = 'Годовой налог равен {:,.2f} рублей.'
+ANN_TAX_ENG = 'The annual tax equals {:,.2f} rubbles.'
 
-big_income_rus = 'Годовой доход выше {:,} рублей и равен {:,} рублей.'
-big_income_eng = 'The annual income exceeds {:,} rubbles and equals {:,} rubbles.'
+BIG_INCOME_RUS = 'Годовой доход выше {:,} рублей и равен {:,} рублей.'
+BIG_INCOME_ENG = 'The annual income exceeds {:,} rubbles and equals {:,} rubbles.'
 
-your_income_rus = 'Ваш годовой доход, рублей'
-your_income_eng = 'Your annual income, rubbles'
+YOUR_INCOME_RUS = 'Ваш годовой доход, рублей'
+YOUR_INCOME_ENG = 'Your annual income, rubbles'
 
-relevant_tax_rates_rus = 'Соответствующие налоговые ставки'
-relevant_tax_rates_eng = 'Relevant tax rates'
+RELEVANT_TAX_RATES_RUS = 'Соответствующие налоговые ставки'
+RELEVANT_TAX_RATES_ENG = 'Relevant tax rates'
 
-plot_title_rus = 'Начисление налога по прогрессивной системе налогообложения в зависимости от Вашего дохода'
-plot_title_eng = 'Progressive taxation depending on your income'
+PLOT_TITLE_RUS = 'Начисление налога по прогрессивной системе налогообложения в зависимости от Вашего дохода'
+PLOT_TITLE_ENG = 'Progressive taxation depending on your income'
 
-status_heading_rus = 'Статус пользователя: {}\n'
-status_heading_eng = 'User`s status: {}\n'
+STATUS_HEADING_RUS = 'Статус пользователя: {}\n'
+STATUS_HEADING_ENG = 'User`s status: {}\n'
 
-tax_heading_rus = 'Ваш годовой налог: {:,.2f} рублей'
-tax_heading_eng = 'Your annual tax: {:,.2f} rubbles'
+TAX_HEADING_RUS = 'Ваш годовой налог: {:,.2f} рублей'
+TAX_HEADING_ENG = 'Your annual tax: {:,.2f} rubbles'

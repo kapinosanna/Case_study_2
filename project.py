@@ -5,42 +5,42 @@ from vocabulary import *
 while True:
     language = input('Please choose the language: Russian or English? ')
     if language.lower() == 'russian' or language.lower() == 'русский':
-        question1 = question1_rus
-        question_kids = question_kids_rus
-        status_lonepar = status_lonepar_rus
-        status_subject = status_subject_rus
-        status_couple = status_couple_rus
-        income_differ = income_differ_rus
-        av_mon_income = av_mon_income_rus
-        list_months = list_months_rus
-        est_mon_income = est_mon_income_rus
-        income_between = income_between_rus
-        ann_tax = ann_tax_rus
-        big_income = big_income_rus
-        your_income = your_income_rus
-        relevant_tax_rates = relevant_tax_rates_rus
-        plot_title = plot_title_rus
-        status_heading = status_heading_rus
-        tax_heading = tax_heading_rus
+        question1 = QUESTION1_RUS
+        question_kids = QUESTION_KIDS_RUS
+        status_lonepar = STATUS_LONEPAR_RUS
+        status_subject = STATUS_SUBJECT_RUS
+        status_couple = STATUS_COUPLE_RUS
+        income_differ = INCOME_DIFFER_RUS
+        av_mon_income = AV_MON_INCOME_RUS
+        list_months = LIST_MONTHS_RUS
+        est_mon_income = EST_MON_INCOME_RUS
+        income_between = INCOME_BETWEEN_RUS
+        ann_tax = ANN_TAX_RUS
+        big_income = BIG_INCOME_RUS
+        your_income = YOUR_INCOME_RUS
+        relevant_tax_rates = RELEVANT_TAX_RATES_RUS
+        plot_title = PLOT_TITLE_RUS
+        status_heading = STATUS_HEADING_RUS
+        tax_heading = TAX_HEADING_RUS
         break
     elif language.lower() == 'english' or language.lower() == 'английский':
-        question1 = question1_eng
-        question_kids = question_kids_eng
-        status_lonepar = status_lonepar_eng
-        status_subject = status_subject_eng
-        status_couple = status_couple_eng
-        income_differ = income_differ_eng
-        av_mon_income = av_mon_income_eng
-        list_months = list_months_eng
-        est_mon_income = est_mon_income_eng
-        income_between = income_between_eng
-        ann_tax = ann_tax_eng
-        big_income = big_income_eng
-        your_income = your_income_eng
-        relevant_tax_rates = relevant_tax_rates_eng
-        plot_title = plot_title_eng
-        status_heading = status_heading_eng
-        tax_heading = tax_heading_eng
+        question1 = QUESTION1_ENG
+        question_kids = QUESTION_KIDS_ENG
+        status_lonepar = STATUS_LONEPAR_ENG
+        status_subject = STATUS_SUBJECT_ENG
+        status_couple = STATUS_COUPLE_ENG
+        income_differ = INCOME_DIFFER_ENG
+        av_mon_income = AV_MON_INCOME_ENG
+        list_months = LIST_MONTHS_ENG
+        est_mon_income = EST_MON_INCOME_ENG
+        income_between = INCOME_BETWEEN_ENG
+        ann_tax = ANN_TAX_ENG
+        big_income = BIG_INCOME_ENG
+        your_income = YOUR_INCOME_ENG
+        relevant_tax_rates = RELEVANT_TAX_RATES_ENG
+        plot_title = PLOT_TITLE_ENG
+        status_heading = STATUS_HEADING_ENG
+        tax_heading = TAX_HEADING_ENG
         break
     print('You typed the language incorrectly. Please, try again.\n')
 
