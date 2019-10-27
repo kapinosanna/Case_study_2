@@ -8,9 +8,9 @@ AV_MON_INCOME_ENG = 'What is your average month income? '
 LIST_MONTHS_ENG = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
                    'November', 'December']
 EST_MON_INCOME_ENG = 'What is your estimated income in {}? '
-INCOME_BETWEEN_ENG = '\nThe annual income is between {:,} and {:,} rubbles and equals {:,} rubbles.'
+INCOME_BETWEEN_ENG = 'The annual income is between {:,} and {:,} rubbles and equals {:,} rubbles.'
 ANN_TAX_ENG = 'The annual tax equals {:,.2f} rubbles.'
-BIG_INCOME_ENG = '\nThe annual income exceeds {:,} rubbles and equals {:,} rubbles.'
+BIG_INCOME_ENG = 'The annual income exceeds {:,} rubbles and equals {:,} rubbles.'
 YOUR_INCOME_ENG = 'Your annual income, rubbles'
 RELEVANT_TAX_RATES_ENG = 'Relevant tax rates'
 PLOT_TITLE_ENG = 'Progressive taxation depending on your income'
