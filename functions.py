@@ -1,12 +1,9 @@
 from matplotlib.pyplot import *
-from vocabulary_eng import *
-from vocabulary_rus import *
 
 
 # Defining the function of plotting the step plot for the calculated tax
 # The arguments are x and y vectors, also the calculated tax is included
 def plot_step(vector_x, vector_y, tax, status, language):
-
     global plot_title, status_heading, tax_heading, your_income, relevant_tax_rates
     if language.lower() == 'russian' or language.lower() == 'русский':
         from vocabulary_rus import plot_title, status_heading, tax_heading, your_income, relevant_tax_rates
@@ -33,8 +30,6 @@ def plot_step(vector_x, vector_y, tax, status, language):
 # Defining the function of counting the tax depending on the income
 # The arguments are control sums, relevant to the subject's status
 def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6, income, status, language):
-
-
     global income_between, ann_tax, big_income
     if language.lower() == 'russian' or language.lower() == 'русский':
         from vocabulary_rus import income_between, ann_tax, big_income
@@ -64,11 +59,11 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6, income, status, langu
             if income < control_sums[1]:
                 x_vector = [income]
             else:
-                x_vector = control_sums[:i+1] + [income]
+                x_vector = control_sums[:i + 1] + [income]
             if income < control_sums[1]:
                 y_vector = [tax_rates[0]]
             else:
-                y_vector = tax_rates[:i+1] + [tax_rates[i]]
+                y_vector = tax_rates[:i + 1] + [tax_rates[i]]
 
             # Initializing the plot (derived from "functions" file)
             plot_step(x_vector, y_vector, tax, status, language)

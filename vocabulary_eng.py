@@ -17,7 +17,7 @@ PLOT_TITLE_ENG = 'Progressive taxation depending on your income'
 STATUS_HEADING_ENG = 'User`s status: {}\n'
 TAX_HEADING_ENG = 'Your annual tax: {:,.2f} rubbles'
 DEDUCTION_ENG = 'The amount of tax to deduce annually: '
-SAVE_OR_SHOW_ENG = '\nWould you like to display or save the plot? '
+SAVE_OR_SHOW_ENG = '\nWould you like to show or save the plot? '
 
 question1 = QUESTION1_ENG
 question_kids = QUESTION_KIDS_ENG
