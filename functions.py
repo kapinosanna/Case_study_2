@@ -37,16 +37,14 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6, income, status):
             print(income_between.format(control_sums[i], control_sums[i + 1], income).replace(',', ' '))
 
             # Calculating the tax-part which can't be cycled
-            control_sums[0] = -1
             tax = (income - control_sums[i]) * tax_rates[i]
 
             # Rolling the cycle to count the residual of the tax
             for k in range(i):
-                tax += tax_rates[k] * (control_sums[k + 1] - (control_sums[k] + 1))
+                tax += tax_rates[k] * (control_sums[k + 1] - (control_sums[k]))
             print(ann_tax.format(tax).replace(',', ' '))
 
             # Making x and y vectors for the plot
-            control_sums[0] = 0
             if income < control_sums[1]:
                 x_vector = [income]
             else:
@@ -64,16 +62,14 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6, income, status):
             print(big_income.format(control_sums[-1], income).replace(',', ' '))
 
             # Calculating the tax-part which can't be cycled
-            control_sums[0] = -1
             tax = (income - control_sums[-1]) * tax_rates[-1]
 
             # Rolling the cycle to count the residual of the tax
             for k in range(len(control_sums) - 1):
-                tax += tax_rates[k] * (control_sums[k + 1] - (control_sums[k] + 1))
+                tax += tax_rates[k] * (control_sums[k + 1] - (control_sums[k]))
             print(ann_tax.format(tax).replace(',', ' '))
 
             # Making x and y vectors for the plot
-            control_sums[0] = 0
             x_vector = control_sums + [income]
             y_vector = tax_rates + [tax_rates[-1]]
 
