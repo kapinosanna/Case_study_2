@@ -31,6 +31,7 @@ while True:
     print('Oops, there`s a misprint somewhere! Please, try again!\n')
 
 # Finding out about the subject's estimate income
+income = 0
 ident = input(income_differ)
 if ident.lower() == 'нет' or ident.lower() == 'no':
     month_income = int(input(av_mon_income))
