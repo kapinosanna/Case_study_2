@@ -5,7 +5,14 @@ from vocabulary_rus import *
 
 # Defining the function of plotting the step plot for the calculated tax
 # The arguments are x and y vectors, also the calculated tax is included
-def plot_step(vector_x, vector_y, tax, status):
+def plot_step(vector_x, vector_y, tax, status, language):
+
+    global plot_title, status_heading, tax_heading, your_income, relevant_tax_rates
+    if language.lower() == 'russian' or language.lower() == 'русский':
+        from vocabulary_rus import plot_title, status_heading, tax_heading, your_income, relevant_tax_rates
+    elif language.lower() == 'english' or language.lower() == 'английский':
+        from vocabulary_eng import plot_title, status_heading, tax_heading, your_income, relevant_tax_rates
+
     fig, ax = subplots()
     fig.canvas.set_window_title(plot_title)
     bgcolor = '#E0FFFF'
@@ -25,7 +32,15 @@ def plot_step(vector_x, vector_y, tax, status):
 
 # Defining the function of counting the tax depending on the income
 # The arguments are control sums, relevant to the subject's status
-def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6, income, status):
+def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6, income, status, language):
+
+
+    global income_between, ann_tax, big_income
+    if language.lower() == 'russian' or language.lower() == 'русский':
+        from vocabulary_rus import income_between, ann_tax, big_income
+    elif language.lower() == 'english' or language.lower() == 'английский':
+        from vocabulary_eng import income_between, ann_tax, big_income
+
     # Defining the parameters
     control_sums = [0, sum1, sum2, sum3, sum4, sum5, sum6]
     tax_rates = [0.1, 0.15, 0.25, 0.28, 0.33, 0.35, 0.396]
@@ -56,7 +71,7 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6, income, status):
                 y_vector = tax_rates[:i+1] + [tax_rates[i]]
 
             # Initializing the plot (derived from "functions" file)
-            plot_step(x_vector, y_vector, tax, status)
+            plot_step(x_vector, y_vector, tax, status, language)
             break
 
         elif income >= (control_sums[-1] + 1):  # When the income is higher than the biggest control sum
@@ -75,5 +90,5 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6, income, status):
             y_vector = tax_rates + [tax_rates[-1]]
 
             # Initializing the plot (derived from "functions" file)
-            plot_step(x_vector, y_vector, tax, status)
+            plot_step(x_vector, y_vector, tax, status, language)
             break

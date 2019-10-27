@@ -52,10 +52,16 @@ income -= deduction_sum
 
 # Calculating the tax based on the subject's status and plotting the beauty
 if status == status_subject:
-    roll_the_tax_cycle(9075, 36900, 89350, 186350, 405100, 406750, income, status)
+    roll_the_tax_cycle(9075, 36900, 89350, 186350, 405100, 406750, income, status, language)
 elif status == status_couple:
-    roll_the_tax_cycle(18150, 73800, 148850, 226850, 405100, 457600, income, status)
+    roll_the_tax_cycle(18150, 73800, 148850, 226850, 405100, 457600, income, status, language)
 else:
-    roll_the_tax_cycle(12950, 49400, 127550, 206600, 405100, 432200, income, status)
+    roll_the_tax_cycle(12950, 49400, 127550, 206600, 405100, 432200, income, status, language)
 
-show()
+# Deciding whether to save the plot or just show it
+choice_of_path = input(save_or_show)
+if choice_of_path == 'show' or choice_of_path == 'показать':
+    show()
+elif choice_of_path == 'save' or choice_of_path == 'сохранить':
+    plot_name = plot_title + '.png'
+    savefig(plot_name, dpi=300, bbox_inches='tight')

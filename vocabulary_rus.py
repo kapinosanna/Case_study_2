@@ -8,15 +8,16 @@ AV_MON_INCOME_RUS = 'Каков Ваш приблизительный месяч
 LIST_MONTHS_RUS = ['январе', 'феврале', 'марте', 'апреле', 'мае', 'июне', 'июле', 'августе', 'сентябре', 'октябре',
                    'ноябре', 'декабре']
 EST_MON_INCOME_RUS = 'Каков Ваш приблизительный доход в {}? '
-INCOME_BETWEEN_RUS = 'Годовой доход находится между {:,} и {:,} рублями и равен {:,} рублей.'
+INCOME_BETWEEN_RUS = '\nГодовой доход находится между {:,} и {:,} рублями и равен {:,} рублей.'
 ANN_TAX_RUS = 'Годовой налог равен {:,.2f} рублей.'
-BIG_INCOME_RUS = 'Годовой доход выше {:,} рублей и равен {:,} рублей.'
+BIG_INCOME_RUS = '\nГодовой доход выше {:,} рублей и равен {:,} рублей.'
 YOUR_INCOME_RUS = 'Ваш годовой доход, рублей'
 RELEVANT_TAX_RATES_RUS = 'Соответствующие налоговые ставки'
 PLOT_TITLE_RUS = 'Начисление налога по прогрессивной системе налогообложения в зависимости от Вашего дохода'
 STATUS_HEADING_RUS = 'Статус пользователя: {}\n'
 TAX_HEADING_RUS = 'Ваш годовой налог: {:,.2f} рублей'
 DEDUCTION_RUS = 'Ваш годовой налоговый вычет: '
+SAVE_OR_SHOW_RUS = '\nВы хотели бы сохранить или показать рисунок? '
 
 question1 = QUESTION1_RUS
 question_kids = QUESTION_KIDS_RUS
@@ -36,3 +37,4 @@ plot_title = PLOT_TITLE_RUS
 status_heading = STATUS_HEADING_RUS
 tax_heading = TAX_HEADING_RUS
 deduction = DEDUCTION_RUS
+save_or_show = SAVE_OR_SHOW_RUS
