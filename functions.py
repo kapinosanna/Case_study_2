@@ -47,8 +47,14 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6, income, status):
 
             # Making x and y vectors for the plot
             control_sums[0] = 0
-            x_vector = control_sums[:i] + [income]
-            y_vector = tax_rates[:i] + [tax_rates[i - 1]]
+            if income < control_sums[1]:
+                x_vector = [income]
+            else:
+                x_vector = control_sums[:i+1] + [income]
+            if income < control_sums[1]:
+                y_vector = [tax_rates[0]]
+            else:
+                y_vector = tax_rates[:i+1] + [tax_rates[i]]
 
             # Initializing the plot (derived from "functions" file)
             plot_step(x_vector, y_vector, tax, status)
