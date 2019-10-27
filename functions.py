@@ -7,6 +7,7 @@ from vocabulary_rus import *
 # The arguments are x and y vectors, also the calculated tax is included
 def plot_step(vector_x, vector_y, tax, status):
     fig, ax = subplots()
+    fig.canvas.set_window_title(plot_title)
     bgcolor = '#E0FFFF'
     ax.set_facecolor(bgcolor)
     fig.patch.set_facecolor(bgcolor)
