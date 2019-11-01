@@ -1,3 +1,7 @@
+# Case-study #2
+# Developers:   Kapinos A. (45%),
+#               Kovshov G. (55%),
+#               Pankova J. (35%)
 from functions import *
 
 # Defining the language
