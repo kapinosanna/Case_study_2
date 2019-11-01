@@ -69,4 +69,4 @@ if choice_of_path == 'show' or choice_of_path == 'показать':
     show()
 elif choice_of_path == 'save' or choice_of_path == 'сохранить':
     plot_name = plot_title + '.png'
-    savefig(plot_name, dpi=300, bbox_inches='tight')
+    savefig(plot_name, dpi=300, bbox_inches='tight') 
