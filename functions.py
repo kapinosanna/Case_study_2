@@ -45,7 +45,7 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6, income, status, langu
 
         # Checking if the income is between two of adjacent control sums
         if control_sums[i] <= income <= control_sums[i + 1]:
-            print('\n----------------------------------------------------------------------------------------')
+            print('\n' + '-'*60)
             print(income_between.format(control_sums[i], control_sums[i + 1], income).replace(',', ' '))
 
             # Calculating the tax-part which can't be cycled
@@ -55,7 +55,7 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6, income, status, langu
             for k in range(i):
                 tax += tax_rates[k] * (control_sums[k + 1] - (control_sums[k]))
             print(ann_tax.format(tax).replace(',', ' '))
-            print('----------------------------------------------------------------------------------------')
+            print('-'*60)
 
             # Making x and y vectors for the plot
             if income < control_sums[1]:
@@ -72,7 +72,7 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6, income, status, langu
             break
 
         elif income >= (control_sums[-1] + 1):  # When the income is higher than the biggest control sum
-            print('\n----------------------------------------------------------------------------------------')
+            print('\n' + '-'*60)
             print(big_income.format(control_sums[-1], income).replace(',', ' '))
 
             # Calculating the tax-part which can't be cycled
@@ -82,7 +82,7 @@ def roll_the_tax_cycle(sum1, sum2, sum3, sum4, sum5, sum6, income, status, langu
             for k in range(len(control_sums) - 1):
                 tax += tax_rates[k] * (control_sums[k + 1] - (control_sums[k]))
             print(ann_tax.format(tax).replace(',', ' '))
-            print('----------------------------------------------------------------------------------------')
+            print('-'*60)
 
             # Making x and y vectors for the plot
             x_vector = control_sums + [income]

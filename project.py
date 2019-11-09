@@ -34,9 +34,9 @@ while True:
         break
     print('Oops, there`s a misprint somewhere! Please, try again!\n')
 
-print('\n----------------------------------------------------------------------------------------')
+print('\n'+'-'*60)
 print(your_subject_status.format(status))
-print('----------------------------------------------------------------------------------------\n')
+print('-'*60 + '\n')
 
 # Finding out about the subject's estimate income
 income = 0
