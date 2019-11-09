@@ -1,3 +1,7 @@
+# Case-study #2
+# Developers:   Kapinos A. (45%),
+#               Kovshov G. (55%),
+#               Pankova J. (35%)
 from functions import *
 
 # Defining the language
@@ -69,4 +73,4 @@ if choice_of_path == 'show' or choice_of_path == 'показать':
     show()
 elif choice_of_path == 'save' or choice_of_path == 'сохранить':
     plot_name = plot_title + '.png'
-    savefig(plot_name, dpi=300, bbox_inches='tight')
+    savefig(plot_name, dpi=300, bbox_inches='tight') 
