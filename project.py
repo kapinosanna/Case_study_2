@@ -30,6 +30,10 @@ while True:
         break
     print('Oops, there`s a misprint somewhere! Please, try again!\n')
 
+print('\n----------------------------------------------------------------------------------------')
+print(your_subject_status.format(status))
+print('----------------------------------------------------------------------------------------\n')
+
 # Finding out about the subject's estimate income
 income = 0
 ident = input(income_differ)

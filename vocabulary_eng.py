@@ -18,6 +18,7 @@ STATUS_HEADING_ENG = 'User`s status: {}\n'
 TAX_HEADING_ENG = 'Your annual tax: {:,.2f} rubbles'
 DEDUCTION_ENG = 'The amount of tax to deduce annually: '
 SAVE_OR_SHOW_ENG = '\nWould you like to show or save the plot? '
+YOUR_SUBJECT_STATUS_ENG = 'Your status - {}'
 
 question1 = QUESTION1_ENG
 question_kids = QUESTION_KIDS_ENG
@@ -38,3 +39,4 @@ status_heading = STATUS_HEADING_ENG
 tax_heading = TAX_HEADING_ENG
 deduction = DEDUCTION_ENG
 save_or_show = SAVE_OR_SHOW_ENG
+your_subject_status = YOUR_SUBJECT_STATUS_ENG

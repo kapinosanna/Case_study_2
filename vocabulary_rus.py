@@ -18,6 +18,7 @@ STATUS_HEADING_RUS = 'Статус пользователя: {}\n'
 TAX_HEADING_RUS = 'Ваш годовой налог: {:,.2f} рублей'
 DEDUCTION_RUS = 'Ваш годовой налоговый вычет: '
 SAVE_OR_SHOW_RUS = '\nВы хотели бы сохранить или показать рисунок? '
+YOUR_SUBJECT_STATUS_RUS = 'Ваш статус - {}'
 
 question1 = QUESTION1_RUS
 question_kids = QUESTION_KIDS_RUS
@@ -38,3 +39,4 @@ status_heading = STATUS_HEADING_RUS
 tax_heading = TAX_HEADING_RUS
 deduction = DEDUCTION_RUS
 save_or_show = SAVE_OR_SHOW_RUS
+your_subject_status = YOUR_SUBJECT_STATUS_RUS
